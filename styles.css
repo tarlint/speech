@@ -80,21 +80,11 @@ header {
     height: 80px;
     width: auto;
     display: block;
-    -webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 1) 6%, rgba(0, 0, 0, 1) 94%, transparent 100%), linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 1) 8%, rgba(0, 0, 0, 1) 92%, transparent 100%);
-    -webkit-mask-composite: source-in;
-    mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 1) 6%, rgba(0, 0, 0, 1) 94%, transparent 100%), linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 1) 8%, rgba(0, 0, 0, 1) 92%, transparent 100%);
-    mask-composite: intersect;
 }
 
 .logo-text {
     display: flex;
-    flex-direction: column;
-}
-
-.logo h1 {
-    color: var(--primary-color);
-    font-size: 1.5rem;
-    font-weight: 700;
+    align-items: center;
 }
 
 .service-label {
@@ -102,7 +92,12 @@ header {
     font-size: 0.9rem;
     font-weight: 500;
     display: block;
-    margin-top: -5px;
+}
+
+@media (max-width: 768px) {
+    .logo-image {
+        height: 68px;
+    }
 }
 
 .mobile-menu-toggle {
