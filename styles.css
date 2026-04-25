@@ -172,7 +172,9 @@ main {
 }
 
 .hero {
-    background: linear-gradient(135deg, var(--dark-navy) 0%, #113a70 45%, var(--secondary-color) 100%);
+    background:
+        radial-gradient(circle at top center, rgba(98, 199, 222, 0.24), transparent 32%),
+        linear-gradient(135deg, var(--dark-navy) 0%, #113a70 45%, var(--secondary-color) 100%);
     color: var(--white);
     padding: 6rem 0;
     text-align: center;
@@ -211,12 +213,13 @@ main {
 }
 
 .btn-primary {
-    background-color: var(--accent-color);
+    background: linear-gradient(135deg, var(--accent-color), var(--secondary-color));
     color: var(--white);
+    box-shadow: 0 14px 30px rgba(47, 105, 207, 0.28);
 }
 
 .btn-primary:hover {
-    background-color: var(--secondary-color);
+    background: linear-gradient(135deg, #7ad7ea, #3e7cf0);
     color: var(--white);
     transform: translateY(-2px);
 }
@@ -245,7 +248,7 @@ main {
 
 .services {
     padding: 6rem 0;
-    background-color: var(--background-light);
+    background: linear-gradient(180deg, #eaf4ff 0%, #dfeeff 100%);
 }
 
 .services h2 {
@@ -262,7 +265,8 @@ main {
 }
 
 .service-card {
-    background-color: var(--white);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), #eef6ff);
+    border: 1px solid rgba(98, 199, 222, 0.22);
     padding: 2rem;
     border-radius: var(--border-radius);
     box-shadow: var(--shadow);
@@ -271,7 +275,7 @@ main {
 
 .service-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 18px 34px rgba(17, 58, 112, 0.18);
 }
 
 .service-card h3 {
@@ -307,7 +311,7 @@ main {
 
 .about {
     padding: 6rem 0;
-    background-color: var(--white);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.92), #f3f9ff);
 }
 
 .about h2 {
@@ -355,8 +359,10 @@ main {
 .specializations {
     margin-top: 2rem;
     padding: 2rem;
-    background-color: var(--background-light);
+    background: linear-gradient(180deg, #f5fbff, #e8f4ff);
+    border: 1px solid var(--border-light);
     border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
 }
 
 .specializations h4 {
