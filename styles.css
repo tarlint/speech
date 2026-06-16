@@ -817,9 +817,7 @@ main {
 }
 
 .hero {
-    background:
-        linear-gradient(90deg, rgba(255, 248, 239, 0.96) 0%, rgba(255, 248, 239, 0.82) 33%, rgba(255, 248, 239, 0.18) 57%, rgba(255, 248, 239, 0) 74%),
-        url('speech-hero.png?v=20260616a');
+    background: url('speech-hero.png?v=20260616a');
     background-size: cover;
     background-position: center right;
     background-repeat: no-repeat;
@@ -1028,9 +1026,7 @@ footer {
 
     .hero {
         min-height: 620px;
-        background:
-            linear-gradient(180deg, rgba(255, 248, 239, 0.96) 0%, rgba(255, 248, 239, 0.82) 45%, rgba(255, 248, 239, 0.18) 100%),
-            url('speech-hero.png?v=20260616a');
+        background: url('speech-hero.png?v=20260616a');
         background-size: cover;
         background-position: 58% center;
     }
