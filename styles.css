@@ -22,7 +22,7 @@
     box-sizing: border-box;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 
 body {
     font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -679,15 +679,15 @@ footer {
     }
 }
 
-/* NP4H-inspired professional practice refresh */
+/* Portal-matched professional practice refresh */
 :root {
-    --pmr-brown: #2a6fca;
-    --pmr-dark: #06172d;
-    --pmr-teal: #55c7d7;
-    --pmr-teal-dark: #2f77d2;
-    --pmr-cream: #f4f9fd;
-    --np4h-sky: #78d8e5;
-    --pmr-royal: #2a6fca;
+    --pmr-brown: #9f744d;
+    --pmr-dark: #34261f;
+    --pmr-teal: #c79a6b;
+    --pmr-teal-dark: #d9b98f;
+    --pmr-cream: #fff8ef;
+    --np4h-sky: #8ed7e7;
+    --pmr-royal: #3778bd;
 }
 
 body {
@@ -695,7 +695,7 @@ body {
 }
 
 header {
-    background: linear-gradient(90deg, #06172d, #123b74 58%, #2a6fca);
+    background: var(--pmr-cream);
     border-bottom: 0;
     box-shadow: none;
 }
@@ -706,21 +706,21 @@ header::before {
     max-width: 1220px;
     margin: 0 auto;
     padding: 0.75rem 20px;
-    color: var(--white);
+    color: #101820;
     font-weight: 600;
 }
 
 .main-nav {
-    background: linear-gradient(90deg, #071c34, #102f5e 56%, #0d253f);
+    background: #000000;
     padding: 0;
 }
 
 .nav-container {
-    min-height: 96px;
+    min-height: 116px;
 }
 
 .logo-image {
-    height: 70px;
+    height: 92px;
     filter: none;
     -webkit-mask-image: none;
     mask-image: none;
@@ -733,7 +733,7 @@ header::before {
     padding: 0.35rem 0.7rem;
     border: 1px solid rgba(255, 255, 255, 0.25);
     border-radius: 999px;
-    background: rgba(85, 199, 215, 0.12);
+    background: transparent;
     text-transform: uppercase;
 }
 
@@ -742,36 +742,63 @@ main {
 }
 
 .hero {
-    background: #f7f7f7;
+    background:
+        linear-gradient(135deg, rgba(255, 248, 239, 0.98), rgba(245, 234, 220, 0.94)),
+        radial-gradient(circle at 78% 14%, rgba(142, 215, 231, 0.18), transparent 28%);
     color: #101820;
-    text-align: left;
-    padding: 5.5rem 0 4.5rem;
+    text-align: center;
+    padding: 5rem 0 4.5rem;
     border-bottom: 1px solid #e3e0dc;
 }
 
 .hero-content {
-    max-width: 1180px;
+    max-width: 960px;
     margin: 0 auto;
     padding: 0 20px;
-    text-align: left;
+    text-align: center;
+}
+
+.hero-location {
+    margin-bottom: 1.15rem;
+}
+
+.brand-wordmark {
+    display: inline-block;
+    width: min(100%, 520px);
+    padding: 0.65rem 1rem;
+    border-radius: 6px;
+    background: var(--pmr-brown);
+    color: var(--white) !important;
+    font-family: 'Fredoka', 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: clamp(1.35rem, 3vw, 2.05rem);
+    font-weight: 800;
+    line-height: 1.05;
+    letter-spacing: 0;
+    text-align: center;
+    text-transform: none;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.38);
 }
 
 .hero-content h1 {
     color: #101820;
-    max-width: 760px;
-    font-size: clamp(2.6rem, 5vw, 4.25rem);
+    max-width: 840px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: clamp(2.65rem, 5.5vw, 4.6rem);
     line-height: 1.05;
     letter-spacing: 0;
+    text-align: center;
 }
 
 .hero-content p {
     color: #1c2730;
     max-width: 680px;
-    margin-left: 0;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .cta-buttons {
-    justify-content: flex-start;
+    justify-content: center;
 }
 
 .btn {
@@ -780,21 +807,21 @@ main {
 }
 
 .btn-primary {
-    background: linear-gradient(135deg, var(--pmr-teal), var(--pmr-teal-dark));
+    background: var(--pmr-teal);
     color: #041425;
     box-shadow: none;
 }
 
 .btn-primary:hover,
 .btn-secondary:hover {
-    background: linear-gradient(135deg, #7de1ec, #3c86e5);
+    background: #b7683f;
     color: var(--white);
 }
 
 .btn-secondary {
-    background: var(--pmr-dark);
-    border-color: var(--pmr-dark);
-    color: var(--white);
+    background: var(--pmr-teal-dark);
+    border-color: var(--pmr-teal-dark);
+    color: #2f2418;
 }
 
 .btn-outline {
@@ -909,6 +936,10 @@ footer {
         min-height: 84px;
     }
 
+    .logo-image {
+        height: 58px;
+    }
+
     .hero,
     .hero-content {
         text-align: center;
@@ -921,5 +952,210 @@ footer {
 
     .cta-buttons {
         justify-content: center;
+    }
+}
+
+/* Match the New Paths 4 Health portal header/dropdowns */
+header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+header::before {
+    max-height: 48px;
+    overflow: hidden;
+    transition: padding 0.2s ease, font-size 0.2s ease, max-height 0.2s ease;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: min-height 0.2s ease, padding 0.2s ease;
+}
+
+.logo-link {
+    color: var(--white);
+}
+
+.logo-link:hover {
+    opacity: 0.88;
+}
+
+.service-label {
+    border: 0;
+    padding: 0;
+    font-family: 'Dancing Script', "Snell Roundhand", "Apple Chancery", cursive;
+    font-size: 1.28rem;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    text-transform: none;
+    white-space: normal;
+    width: 150px;
+    min-height: 92px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.05;
+    transform: translate(-16px, -10px) rotate(-14deg);
+    transform-origin: center;
+    text-shadow: 0 1px 8px rgba(0, 0, 0, 0.35);
+}
+
+.service-label span {
+    display: block;
+    white-space: nowrap;
+}
+
+.service-label span:nth-child(1) {
+    transform: translateX(-12px);
+}
+
+.service-label span:nth-child(2) {
+    transform: translateX(6px);
+}
+
+.service-label span:nth-child(3) {
+    transform: translateX(-4px);
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 1.65rem;
+}
+
+.nav-link {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.nav-link:hover {
+    color: var(--np4h-sky);
+    background: transparent;
+}
+
+.nav-dropdown {
+    position: relative;
+    padding: 1.25rem 0;
+}
+
+.nav-dropdown-trigger {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+
+.nav-dropdown-trigger i {
+    font-size: 0.72rem;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    min-width: 230px;
+    padding: 0.65rem;
+    border: 1px solid rgba(217, 162, 79, 0.34);
+    border-radius: var(--border-radius);
+    background: rgba(47, 36, 24, 0.98);
+    box-shadow: 0 18px 45px rgba(47, 36, 24, 0.28);
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, 8px);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    z-index: 20;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 0.72rem 0.85rem;
+    border-radius: 6px;
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.dropdown-menu a:hover,
+.dropdown-menu a:focus-visible {
+    background: rgba(217, 162, 79, 0.18);
+    color: var(--np4h-sky);
+    outline: none;
+}
+
+.nav-dropdown:hover .dropdown-menu,
+.nav-dropdown:focus-within .dropdown-menu {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, 0);
+}
+
+body.nav-compact .nav-actions {
+    display: none;
+}
+
+body.nav-compact header::before {
+    max-height: 0;
+    padding: 0 20px;
+}
+
+body.nav-compact .nav-container {
+    min-height: auto;
+    padding-top: 0.35rem;
+    padding-bottom: 0.35rem;
+}
+
+body.nav-compact .logo-image {
+    height: 54px;
+}
+
+body.nav-compact .service-label {
+    display: none;
+}
+
+main {
+    margin-top: 0;
+}
+
+@media (max-width: 860px) {
+    .nav-container {
+        min-height: auto;
+        flex-direction: column;
+        padding: 1rem 20px 1.25rem;
+    }
+
+    body.nav-compact .nav-container {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .nav-actions {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+
+    .nav-link {
+        padding: 0.4rem 0.55rem;
+    }
+
+    .dropdown-menu {
+        top: 100%;
+        left: 50%;
+        min-width: 210px;
+        transform: translate(-50%, 8px);
+    }
+
+    .nav-dropdown:hover .dropdown-menu,
+    .nav-dropdown:focus-within .dropdown-menu {
+        transform: translate(-50%, 0);
     }
 }

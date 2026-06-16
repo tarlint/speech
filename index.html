@@ -4,32 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Speech Pathology Services - New Paths for Health</title>
-    <link rel="stylesheet" href="styles.css?v=20260616b">
+    <link rel="stylesheet" href="styles.css?v=20260616d">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
     <header>
-        <nav class="main-nav">
+        <nav class="main-nav" aria-label="Main navigation">
             <div class="nav-container">
-                <div class="logo">
-                    <a href="https://newpathsforhealth.com" class="logo-link">
-                        <img src="logo-transparent.png" alt="New Paths for Health" class="logo-image">
-                        <div class="logo-text">
-                            <span class="service-label">Speech Pathology</span>
+                <a href="https://newpathsforhealth.com/" class="logo-link" aria-label="New Paths for Health home">
+                    <img src="logo-transparent.png?v=20260616f" alt="New Paths for Health" class="logo-image">
+                    <span class="service-label"><span>Serving</span><span>Missoula, MT</span><span>and Online</span></span>
+                </a>
+                <div class="nav-actions">
+                    <div class="nav-dropdown">
+                        <a href="https://newpathsforhealth.com/#services" class="nav-link nav-dropdown-trigger">Services <i class="fas fa-chevron-down" aria-hidden="true"></i></a>
+                        <div class="dropdown-menu" aria-label="Services submenu">
+                            <a href="https://newpathsforhealth.com/#services">Services Overview</a>
+                            <a href="https://neurofeedback.newpathsforhealth.com/">Neurofeedback Training</a>
+                            <a href="https://speech.newpathsforhealth.com/">Speech Therapy</a>
                         </div>
-                    </a>
+                    </div>
+                    <div class="nav-dropdown">
+                        <a href="https://newpathsforhealth.com/#team" class="nav-link nav-dropdown-trigger">Practitioners <i class="fas fa-chevron-down" aria-hidden="true"></i></a>
+                        <div class="dropdown-menu" aria-label="Practitioners submenu">
+                            <a href="https://newpathsforhealth.com/#team">Practitioner Overview</a>
+                            <a href="https://newpathsforhealth.com/#tyler-arlint">Tyler R. Arlint</a>
+                            <a href="https://newpathsforhealth.com/#wendy-arlint">Wendy Arlint</a>
+                        </div>
+                    </div>
+                    <a href="https://newpathsforhealth.com/#reviews" class="nav-link">Reviews</a>
+                    <a href="#contact" class="nav-link">Contact</a>
                 </div>
-                <button class="mobile-menu-toggle" aria-label="Toggle navigation menu">
-                    <i class="fas fa-bars"></i>
-                </button>
-                <ul class="nav-links">
-                    <li><a href="#" class="nav-link active">Home</a></li>
-                    <li><a href="#services" class="nav-link">Services</a></li>
-                    <li><a href="#about" class="nav-link">About Wendy</a></li>
-                    <li><a href="#process" class="nav-link">Treatment Process</a></li>
-                    <li><a href="#contact" class="nav-link">Contact</a></li>
-                    <li><a href="https://newpathsforhealth.com" class="nav-link">Other Services</a></li>
-                </ul>
             </div>
         </nav>
     </header>
@@ -37,7 +42,8 @@
     <main>
         <section class="hero">
             <div class="hero-content">
-                <h1>Speech Pathology Services</h1>
+                <p class="hero-location brand-wordmark">Speech Therapy</p>
+                <h1>Services in Missoula</h1>
                 <p>Professional speech and language therapy to help you communicate with confidence and clarity.</p>
                 <div class="cta-buttons">
                     <a href="#contact" class="btn btn-primary">Schedule Consultation</a>
@@ -204,6 +210,9 @@
         document.addEventListener('DOMContentLoaded', function() {
             const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
             const navLinks = document.querySelector('.nav-links');
+            if (!mobileMenuToggle || !navLinks) {
+                return;
+            }
 
             mobileMenuToggle.addEventListener('click', function() {
                 navLinks.classList.toggle('active');
@@ -241,6 +250,20 @@
                 }
             });
         });
+
+        function updateCompactNav() {
+            var y = window.scrollY || document.documentElement.scrollTop || document.body.scrollTop || 0;
+            if (y > 40) {
+                document.body.className = document.body.className.indexOf('nav-compact') === -1 ? (document.body.className + ' nav-compact').trim() : document.body.className;
+            } else {
+                document.body.className = document.body.className.replace(/\bnav-compact\b/g, '').trim();
+            }
+        }
+        updateCompactNav();
+        window.addEventListener('scroll', updateCompactNav, { passive: true });
+        document.addEventListener('scroll', updateCompactNav, { passive: true });
+        window.addEventListener('touchmove', updateCompactNav, { passive: true });
+        setInterval(updateCompactNav, 250);
     </script>
 </body>
 </html>
