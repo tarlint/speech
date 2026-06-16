@@ -16,6 +16,81 @@
     --very-light-blue: #e9f3fb;
 }
 
+.mobile-nav-toggle {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border: 1px solid rgba(255, 255, 255, 0.24);
+    border-radius: 6px;
+    background: transparent;
+    color: var(--white);
+    font-size: 1.25rem;
+    cursor: pointer;
+}
+
+@media (max-width: 860px) {
+    .mobile-nav-toggle {
+        display: inline-flex;
+    }
+
+    .nav-container {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        align-items: center;
+        row-gap: 0.8rem;
+    }
+
+    .logo-link {
+        min-width: 0;
+    }
+
+    .nav-actions {
+        grid-column: 1 / -1;
+        display: none;
+        width: 100%;
+        padding: 0.75rem 0 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.14);
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+    }
+
+    body.nav-open .nav-actions,
+    body.nav-open.nav-compact .nav-actions {
+        display: flex;
+    }
+
+    .nav-dropdown {
+        padding: 0;
+    }
+
+    .nav-link,
+    .nav-dropdown-trigger {
+        width: 100%;
+        justify-content: space-between;
+        padding: 0.75rem 0.4rem;
+    }
+
+    .dropdown-menu {
+        position: static;
+        display: none;
+        min-width: 0;
+        margin: 0 0 0.4rem;
+        opacity: 1;
+        pointer-events: auto;
+        transform: none;
+        box-shadow: none;
+    }
+
+    .nav-dropdown.is-open .dropdown-menu,
+    .nav-dropdown:focus-within .dropdown-menu {
+        display: block;
+        transform: none;
+    }
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -743,10 +818,16 @@ main {
 
 .hero {
     background:
-        linear-gradient(135deg, rgba(255, 248, 239, 0.98), rgba(245, 234, 220, 0.94)),
-        radial-gradient(circle at 78% 14%, rgba(142, 215, 231, 0.18), transparent 28%);
+        linear-gradient(90deg, rgba(255, 248, 239, 0.96) 0%, rgba(255, 248, 239, 0.82) 33%, rgba(255, 248, 239, 0.18) 57%, rgba(255, 248, 239, 0) 74%),
+        url('speech-hero.png?v=20260616a');
+    background-size: cover;
+    background-position: center right;
+    background-repeat: no-repeat;
     color: #101820;
     text-align: center;
+    min-height: clamp(520px, 70vh, 760px);
+    display: flex;
+    align-items: center;
     padding: 5rem 0 4.5rem;
     border-bottom: 1px solid #e3e0dc;
 }
@@ -945,6 +1026,15 @@ footer {
         text-align: center;
     }
 
+    .hero {
+        min-height: 620px;
+        background:
+            linear-gradient(180deg, rgba(255, 248, 239, 0.96) 0%, rgba(255, 248, 239, 0.82) 45%, rgba(255, 248, 239, 0.18) 100%),
+            url('speech-hero.png?v=20260616a');
+        background-size: cover;
+        background-position: 58% center;
+    }
+
     .hero-content p {
         margin-left: auto;
         margin-right: auto;
@@ -1028,7 +1118,7 @@ header::before {
 .nav-actions {
     display: flex;
     align-items: center;
-    gap: 1.65rem;
+    gap: 1.05rem;
 }
 
 .nav-link {
@@ -1157,5 +1247,63 @@ main {
     .nav-dropdown:hover .dropdown-menu,
     .nav-dropdown:focus-within .dropdown-menu {
         transform: translate(-50%, 0);
+    }
+}
+
+/* Phone menu override: keep links behind the 3-bar menu on vertical screens. */
+@media (max-width: 860px) {
+    .mobile-nav-toggle {
+        display: inline-flex;
+    }
+
+    .nav-container {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        align-items: center;
+        row-gap: 0.8rem;
+    }
+
+    .nav-actions {
+        grid-column: 1 / -1;
+        display: none;
+        width: 100%;
+        padding: 0.75rem 0 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.14);
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+    }
+
+    body.nav-open .nav-actions,
+    body.nav-open.nav-compact .nav-actions {
+        display: flex;
+    }
+
+    .nav-dropdown {
+        padding: 0;
+    }
+
+    .nav-link,
+    .nav-dropdown-trigger {
+        width: 100%;
+        justify-content: space-between;
+        padding: 0.75rem 0.4rem;
+    }
+
+    .dropdown-menu {
+        position: static;
+        display: none;
+        min-width: 0;
+        margin: 0 0 0.4rem;
+        opacity: 1;
+        pointer-events: auto;
+        transform: none;
+        box-shadow: none;
+    }
+
+    .nav-dropdown.is-open .dropdown-menu,
+    .nav-dropdown:focus-within .dropdown-menu {
+        display: block;
+        transform: none;
     }
 }
