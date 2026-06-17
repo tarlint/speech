@@ -838,10 +838,11 @@ main {
     background-repeat: no-repeat;
     color: #101820;
     text-align: left;
-    height: clamp(620px, 72vh, 780px);
+    height: auto;
+    min-height: clamp(620px, 72vh, 780px);
     display: flex;
     align-items: center;
-    padding: 5rem 0 4.5rem;
+    padding: 4rem 0;
     border-bottom: 1px solid #e3e0dc;
 }
 
@@ -923,7 +924,7 @@ main {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
-    margin-top: 2.5rem;
+    margin-top: 1.75rem;
     justify-content: center;
 }
 
@@ -1084,8 +1085,9 @@ footer {
     }
 
     .hero {
-        padding: 3.5rem 0;
-        height: clamp(620px, 72vh, 780px);
+        padding: 3rem 0;
+        height: auto;
+        min-height: clamp(620px, 72vh, 780px);
         background:
             linear-gradient(180deg, rgba(255, 248, 239, 0.94) 0%, rgba(255, 248, 239, 0.82) 42%, rgba(255, 248, 239, 0.18) 100%),
             url('speech-hero-family.png?v=20260617a');
