@@ -834,7 +834,7 @@ main {
         linear-gradient(90deg, rgba(255, 248, 239, 0.96) 0%, rgba(255, 248, 239, 0.84) 34%, rgba(255, 248, 239, 0.12) 68%),
         url('speech-hero-family.png?v=20260617a');
     background-size: cover;
-    background-position: 38% center;
+    background-position: 20% center;
     background-repeat: no-repeat;
     color: #101820;
     text-align: left;
@@ -1090,7 +1090,7 @@ footer {
             linear-gradient(180deg, rgba(255, 248, 239, 0.94) 0%, rgba(255, 248, 239, 0.82) 42%, rgba(255, 248, 239, 0.18) 100%),
             url('speech-hero-family.png?v=20260617a');
         background-size: cover;
-        background-position: 42% center;
+        background-position: 24% center;
     }
 
     .hero-grid {
