@@ -30,7 +30,7 @@
     cursor: pointer;
 }
 
-@media (max-width: 860px) {
+@media (max-width: 680px) {
     .mobile-nav-toggle {
         display: inline-flex;
     }
@@ -170,7 +170,7 @@ header {
     display: block;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 680px) {
     .logo-image {
         height: 68px;
     }
@@ -668,7 +668,7 @@ footer {
     color: var(--secondary-color);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 680px) {
     .nav-links li {
         width: 100%;
     }
@@ -1011,7 +1011,7 @@ footer {
     background: var(--pmr-dark);
 }
 
-@media (min-width: 900px) {
+@media (min-width: 681px) {
     .mobile-menu-toggle {
         display: none;
     }
@@ -1046,7 +1046,7 @@ footer {
     }
 }
 
-@media (max-width: 899px) {
+@media (max-width: 680px) {
     .mobile-menu-toggle {
         color: var(--white);
     }
@@ -1061,7 +1061,7 @@ footer {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 680px) {
     header::before {
         text-align: center;
     }
@@ -1279,7 +1279,7 @@ main {
     margin-top: 0;
 }
 
-@media (max-width: 860px) {
+@media (max-width: 680px) {
     .nav-container {
         min-height: auto;
         flex-direction: column;
@@ -1315,7 +1315,7 @@ main {
 }
 
 /* Phone menu override: keep links behind the 3-bar menu on vertical screens. */
-@media (max-width: 860px) {
+@media (max-width: 680px) {
     .mobile-nav-toggle {
         display: inline-flex;
     }
