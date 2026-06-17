@@ -259,17 +259,16 @@
 
         function updateCompactNav() {
             var y = window.scrollY || document.documentElement.scrollTop || document.body.scrollTop || 0;
-            if (y > 40) {
-                document.body.className = document.body.className.indexOf('nav-compact') === -1 ? (document.body.className + ' nav-compact').trim() : document.body.className;
-            } else {
-                document.body.className = document.body.className.replace(/\bnav-compact\b/g, '').trim();
+            if (y > 90) {
+                document.body.classList.add('nav-compact');
+            } else if (y < 18) {
+                document.body.classList.remove('nav-compact');
             }
         }
         updateCompactNav();
         window.addEventListener('scroll', updateCompactNav, { passive: true });
         document.addEventListener('scroll', updateCompactNav, { passive: true });
         window.addEventListener('touchmove', updateCompactNav, { passive: true });
-        setInterval(updateCompactNav, 250);
 
         document.addEventListener('DOMContentLoaded', function() {
             var menuToggle = document.querySelector('.mobile-nav-toggle');
