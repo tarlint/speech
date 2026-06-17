@@ -838,7 +838,7 @@ main {
     background-repeat: no-repeat;
     color: #101820;
     text-align: left;
-    min-height: clamp(520px, 70vh, 760px);
+    min-height: clamp(560px, 72vh, 780px);
     display: flex;
     align-items: center;
     padding: 5rem 0 4.5rem;
