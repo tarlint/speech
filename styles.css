@@ -91,6 +91,8 @@
     }
 }
 
+
+
 * {
     margin: 0;
     padding: 0;
@@ -1373,5 +1375,56 @@ main {
     .nav-dropdown:focus-within .dropdown-menu {
         display: block;
         transform: none;
+    }
+}
+
+/* Shared footer used across the portal and both service sites. */
+footer {
+    background: #34261f;
+    color: #ffffff;
+    padding: 3rem 0;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1.5rem;
+}
+
+.footer-section h4 {
+    margin: 0 0 1rem;
+    color: #ffffff;
+    font-size: 1rem;
+    line-height: 1.35;
+}
+
+.footer-section p {
+    margin: 0 0 0.55rem;
+    color: #ffffff;
+    line-height: 1.55;
+}
+
+.footer-section a {
+    color: #62c7de;
+    text-decoration: underline;
+    text-decoration-color: rgba(98, 199, 222, 0.45);
+    text-underline-offset: 0.2em;
+}
+
+.footer-section a:hover,
+.footer-section a:focus-visible {
+    color: #ffffff;
+    text-decoration-color: #ffffff;
+}
+
+@media (max-width: 900px) {
+    .footer-content {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 560px) {
+    .footer-content {
+        grid-template-columns: 1fr;
     }
 }
