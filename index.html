@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Speech Pathology Services - New Paths for Health</title>
-    <link rel="stylesheet" href="styles.css?v=20260617k">
+    <link rel="stylesheet" href="styles.css?v=20260618a">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
@@ -20,14 +20,8 @@
                 </button>
                 <div class="nav-actions">
                     <a href="https://newpathsforhealth.com/" class="nav-link">Home</a>
-                    <div class="nav-dropdown">
-                        <a href="https://newpathsforhealth.com/#services" class="nav-link nav-dropdown-trigger">Services <i class="fas fa-chevron-down" aria-hidden="true"></i></a>
-                        <div class="dropdown-menu" aria-label="Services submenu">
-                            <a href="https://newpathsforhealth.com/#services">Services Overview</a>
-                            <a href="https://neurofeedback.newpathsforhealth.com/">Neurofeedback Training</a>
-                            <a href="https://speech.newpathsforhealth.com/">Speech Therapy</a>
-                        </div>
-                    </div>
+                    <a href="https://neurofeedback.newpathsforhealth.com/" class="nav-link">Neurofeedback</a>
+                    <a href="https://speech.newpathsforhealth.com/" class="nav-link">Speech Therapy</a>
                     <div class="nav-dropdown">
                         <a href="https://newpathsforhealth.com/#team" class="nav-link nav-dropdown-trigger">Practitioners <i class="fas fa-chevron-down" aria-hidden="true"></i></a>
                         <div class="dropdown-menu" aria-label="Practitioners submenu">
@@ -40,6 +34,7 @@
                     <a href="https://newpathsforhealth.com/#referrals" class="nav-link">Referrals</a>
                     <a href="https://newpathsforhealth.com/#resources" class="nav-link">Resources</a>
                     <a href="#contact" class="nav-link">Contact</a>
+                    <a href="https://newpathsforhealth.com/#inquiry" class="nav-link">Inquiry</a>
                 </div>
             </div>
         </nav>
@@ -287,7 +282,7 @@
             }
             dropdownTriggers.forEach(function(trigger) {
                 trigger.addEventListener('click', function(event) {
-                    if (window.matchMedia('(max-width: 680px)').matches) {
+                    if (window.matchMedia('(max-width: 1180px)').matches) {
                         event.preventDefault();
                         var parent = trigger.closest('.nav-dropdown');
                         if (parent) {
