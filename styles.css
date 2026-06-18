@@ -791,7 +791,7 @@ header {
 }
 
 header::before {
-    content: "Call Us: (406) 396-9418";
+    content: "Call Us: (406) 404-6738";
     display: block;
     max-width: 1220px;
     margin: 0 auto;
@@ -1426,5 +1426,46 @@ footer {
     .footer-content {
         grid-template-columns: 1fr;
         gap: 2rem;
+    }
+}
+
+
+/* Clickable call strip above the shared navigation banner. */
+header::before {
+    content: none;
+    display: none;
+}
+
+.call-us-bar {
+    max-height: 48px;
+    overflow: hidden;
+    background: #fff8ef;
+    transition: max-height 0.2s ease;
+}
+
+.call-us-bar a {
+    display: block;
+    max-width: 1220px;
+    margin: 0 auto;
+    padding: 0.75rem 20px;
+    color: #101820;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.call-us-bar a:hover,
+.call-us-bar a:focus-visible {
+    color: #8f4f31;
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+}
+
+body.nav-compact .call-us-bar {
+    max-height: 0;
+}
+
+@media (max-width: 860px) {
+    .call-us-bar {
+        text-align: center;
     }
 }
