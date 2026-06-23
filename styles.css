@@ -1469,3 +1469,64 @@ body.nav-compact .call-us-bar {
         text-align: center;
     }
 }
+
+/* Final shared white banner override. */
+header,
+.main-nav,
+.call-us-bar {
+    background: #ffffff;
+}
+
+.logo-link,
+.service-label,
+.nav-link,
+.mobile-nav-toggle {
+    color: #3a2418;
+    text-shadow: none;
+}
+
+.service-label {
+    background: transparent;
+    border: 0;
+}
+
+.logo-image {
+    height: 92px;
+    filter: none;
+    -webkit-mask-image: none;
+    mask-image: none;
+}
+
+.nav-link:hover,
+.nav-link.active,
+.logo-link:hover,
+.mobile-nav-toggle:hover {
+    color: #8f4f31;
+}
+
+.mobile-nav-toggle {
+    border-color: rgba(58, 36, 24, 0.28);
+}
+
+@media (max-width: 1180px) {
+    .nav-actions {
+        border-top-color: rgba(58, 36, 24, 0.16);
+    }
+}
+
+@media (max-width: 768px) {
+    .logo-image {
+        height: 68px;
+    }
+}
+
+@media (max-width: 520px) {
+    .logo-link {
+        flex-direction: column;
+        gap: 0.4rem;
+    }
+
+    .logo-image {
+        height: 58px;
+    }
+}
