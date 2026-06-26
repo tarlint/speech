@@ -1387,7 +1387,7 @@ footer {
 
 .footer-content {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 2.5rem clamp(2rem, 6vw, 5rem);
 }
 
@@ -1420,6 +1420,24 @@ footer {
 .footer-section a:focus-visible {
     color: #ffffff;
     text-decoration-color: #ffffff;
+}
+
+.social-links {
+    display: grid;
+    gap: 0.65rem;
+}
+
+.social-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    width: fit-content;
+}
+
+.social-links i {
+    width: 1.1rem;
+    text-align: center;
+    color: #ffffff;
 }
 
 @media (max-width: 620px) {
